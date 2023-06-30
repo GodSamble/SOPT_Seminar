@@ -9,6 +9,8 @@ import UIKit
 
 final class SecondViewController: UIViewController {
     
+    var name : String?
+    
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "저의 이름은요!"
@@ -29,6 +31,7 @@ final class SecondViewController: UIViewController {
         super.viewDidLoad()
         setStyle()
         setLayout()
+        setSendData()
     }
     
 }
@@ -59,5 +62,10 @@ private extension SecondViewController {
         }else{
             self.navigationController?.popViewController(animated: true)
         }
+    }
+    
+    func setSendData(){
+        guard let name = self.name else { return }
+        nameLabel.text = (name=="") ? "ㅋㅋ 너 아무것도 입력 안했지!!" : "저는 \(name)입니다"
     }
 }
