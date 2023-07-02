@@ -19,7 +19,7 @@
 		1DCC4AD92A500629008358F3 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC4AD82A500629008358F3 /* UIFont+.swift */; };
 		1DCC4ADF2A500FE0008358F3 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCC4ADE2A500FE0008358F3 /* Then */; };
 		1DCC4AE12A5176FB008358F3 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC4AE02A5176FB008358F3 /* UIImage+.swift */; };
-		1DCC4AE42A51809F008358F3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCC4AE32A51809F008358F3 /* SnapKit */; };
+		1DCC4AE72A51858F008358F3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCC4AE62A51858F008358F3 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +44,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DCC4ADF2A500FE0008358F3 /* Then in Frameworks */,
-				1DCC4AE42A51809F008358F3 /* SnapKit in Frameworks */,
+				1DCC4AE72A51858F008358F3 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +104,7 @@
 			name = Seminar_2_Tving;
 			packageProductDependencies = (
 				1DCC4ADE2A500FE0008358F3 /* Then */,
-				1DCC4AE32A51809F008358F3 /* SnapKit */,
+				1DCC4AE62A51858F008358F3 /* SnapKit */,
 			);
 			productName = Seminar_2_Tving;
 			productReference = 1DCC4ABB2A50038F008358F3 /* Seminar_2_Tving.app */;
@@ -136,7 +136,7 @@
 			mainGroup = 1DCC4AB22A50038F008358F3;
 			packageReferences = (
 				1DCC4ADD2A500FE0008358F3 /* XCRemoteSwiftPackageReference "Then" */,
-				1DCC4AE22A51809F008358F3 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1DCC4AE52A51858E008358F3 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 1DCC4ABC2A50038F008358F3 /* Products */;
 			projectDirPath = "";
@@ -400,12 +400,12 @@
 				kind = branch;
 			};
 		};
-		1DCC4AE22A51809F008358F3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		1DCC4AE52A51858E008358F3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
-				branch = develop;
-				kind = branch;
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.6.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -416,9 +416,9 @@
 			package = 1DCC4ADD2A500FE0008358F3 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
 		};
-		1DCC4AE32A51809F008358F3 /* SnapKit */ = {
+		1DCC4AE62A51858F008358F3 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1DCC4AE22A51809F008358F3 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 1DCC4AE52A51858E008358F3 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */

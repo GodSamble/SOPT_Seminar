@@ -38,7 +38,7 @@ final class SignInViewController: UIViewController {
 extension SignInViewController {
     private func setUI() {
         
-        view.backgroundColor = Color.tvingBlack
+        view.backgroundColor = UIColor.colorFFFFFF
         
         backButton.do {
             $0.setImage(Image.backButtonIcon, for: .normal)
@@ -46,20 +46,19 @@ extension SignInViewController {
         
         signInLabel.do {
             $0.text = "TVING ID 로그인"
-            $0.font = UIFont.pretendard(.medium, size:23)
-            $0.textAlignment = .center
-            $0.textColor = Color.tvingWhite
+            $0.font = UIFont.tvingSemiBold(ofSize: 23);            $0.textAlignment = .center
+            $0.textColor = UIColor.color2E2E2E
         }
         
         idTextField.do {
             $0.placeholder = "아이디"
-            $0.setPlaceholderColor(Color.tvinggray4)
-            $0.backgroundColor = Color.tvinggray4
-            $0.font = UIFont.pretendard(.semibold, size: 15)
-            $0.textColor = Color.tvinggray2
+            $0.setPlaceholderColor(UIColor.colorFFFFFF)
+            $0.backgroundColor = UIColor.colorFFFFFF
+            $0.font = UIFont.tvingSemiBold(ofSize: 15)
+            $0.textColor = UIColor.color000000
             $0.layer.cornerRadius = 3
             $0.clearButtonMode = .never
-           //$0.setLeftPaddingPoints(22)
+            //$0.setLeftPaddingPoints(22)
         }
         
         idClearButton.do {
@@ -68,12 +67,12 @@ extension SignInViewController {
         
         passwordTextField.do {
             $0.placeholder = "비밀번호"
-            $0.setPlaceholderColor(Color.tvinggray2)
-            $0.backgroundColor = Color.tvinggray4
-            $0.font = UIFont.pretendard(.semibold, size: 15)
-            $0.textColor = Color.tvinggray2
+            $0.setPlaceholderColor(UIColor.colorFFFFFF)
+            $0.backgroundColor = UIColor.color000000
+            $0.font = UIFont.tvingSemiBold(ofSize: 15)
+            $0.textColor = UIColor.colorFFFFFF
             $0.layer.cornerRadius = 3
-         //   $0.setLeftPaddingPoints(22)
+            //   $0.setLeftPaddingPoints(22)
         }
         
         passwordClearButton.do {
@@ -90,40 +89,48 @@ extension SignInViewController {
         
         idFindButton.do {
             $0.setTitle("아이디 찾기", for: .normal)
-            $0.setTitleColor(Color.tvinggray2, for: .normal)
-            $0.titleLabel?.font = UIFont.pretendard(.semibold, size: 14)
+            $0.setTitleColor(UIColor.color000000, for: .normal)
+            $0.titleLabel?.font = UIFont.tvingSemiBold(ofSize: 15)
         }
         
         betweenView.do {
-            $0.backgroundColor = Color.tvinggray4
+            $0.backgroundColor = UIColor.color626262
         }
         
         passwordFindButton.do {
             $0.setTitle("비밀번호 찾기", for: .normal)
-            $0.setTitleColor(Color.tvinggray2, for: .normal)
-            $0.titleLabel?.font = UIFont.pretendard(.semibold, size: 14)
-        }
+            $0.setTitleColor(UIColor.color2E2E2E, for: .normal)
+            $0.titleLabel?.font = UIFont.tvingSemiBold(ofSize: 14)        }
         
         accountLabel.do {
             $0.text = "아직 계정이 없으신가요?"
-            $0.textColor = Color.tvinggray3
-            $0.font = UIFont.pretendard(.semibold, size: 14)
+            $0.textColor = UIColor.colorFFFFFF
+            $0.font = UIFont.tvingSemiBold(ofSize: 14)
         }
         
         createButton.do {
             $0.setTitle("닉네임 만들러가기", for: .normal)
-            $0.titleLabel?.font = UIFont.pretendard(.regular, size: 14)
-            $0.setTitleColor(Color.tvinggray2, for: .normal)
+            $0.titleLabel?.font = UIFont.tvingRegular(ofSize: 14)
+            $0.setTitleColor(UIColor.color000000, for: .normal)
             $0.setUnderline()
         }
     }
     
     
     private func setLayout() {
-         idButtonView.addSubviews(idClearButton)
-         passwordButtonView.addSubviews(passwordClearButton, passwordSecurityButton)
-         view.addSubviews(backButton, signInLabel, idTextField, passwordTextField, signInButton,idFindButton, betweenView, passwordFindButton, accountLabel, createButton, idButtonView, passwordButtonView)
-
+        //         idButtonView.addSubviews(idClearButton)
+        //         passwordButtonView.addSubviews(passwordClearButton, passwordSecurityButton)
+        //         view.addSubviews(backButton, signInLabel, idTextField, passwordTextField, signInButton,idFindButton, betweenView, passwordFindButton, accountLabel, createButton, idButtonView, passwordButtonView)
+        
+        [backButton, signInLabel, idTextField, passwordTextField, signInButton,idFindButton, betweenView, passwordFindButton, accountLabel, createButton, idButtonView, passwordButtonView].forEach {
+            view.addSubview($0)
+        }
+        [passwordClearButton, passwordSecurityButton].forEach {
+            passwordButtonView.addSubview($0)
+        }
+        [idClearButton].forEach {
+            idButtonView.addSubview($0)
+        }
         
         backButton.snp.makeConstraints{
             $0.top.equalToSuperview().inset(65)

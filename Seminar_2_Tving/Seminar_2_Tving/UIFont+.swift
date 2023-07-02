@@ -1,20 +1,27 @@
 //
-//  UIFont+.swift
-//  Seminar_2_Tving
+//  UIFont.swift
+//  TvingClone
 //
-//  Created by 고영민 on 2023/07/01.
+//  Created by 고영민 on 2023/04/21.
 //
 
 import UIKit
 
 extension UIFont {
-    public enum pretendardType: String {
-        case medium = "Mediun"
-        case regular = "Regular"
-        case semibold = "SemiBold"
+    
+    class func tvingSemiBold(ofSize size: CGFloat) -> UIFont?{
+        return UIFont(name: "Pretendard-SemiBold", size: size)
     }
-    static func pretendard(_ type: pretendardType, size: CGFloat) -> UIFont {
-        return UIFont(name: "Pretendard-\(type.rawValue)", size: size)!
+    
+    class func tvingBold(ofSize size: CGFloat) -> UIFont?{
+        return UIFont(name: "Pretendard-Bold", size: size)
+    }
+    
+    class func tvingMedium(ofSize size: CGFloat) -> UIFont?{
+        return UIFont(name: "Pretendard-Medium", size: size)
+    }
+    
+    class func tvingRegular(ofSize size: CGFloat) -> UIFont?{
+        return UIFont(name: "Pretendard-Regular", size: size)
     }
 }
-
