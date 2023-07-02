@@ -17,8 +17,9 @@
 		1DCC4AD52A500605008358F3 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC4AD42A500605008358F3 /* UITextField+.swift */; };
 		1DCC4AD72A50060F008358F3 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC4AD62A50060F008358F3 /* UIButton+.swift */; };
 		1DCC4AD92A500629008358F3 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC4AD82A500629008358F3 /* UIFont+.swift */; };
-		1DCC4ADC2A500FD4008358F3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCC4ADB2A500FD4008358F3 /* SnapKit */; };
 		1DCC4ADF2A500FE0008358F3 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCC4ADE2A500FE0008358F3 /* Then */; };
+		1DCC4AE12A5176FB008358F3 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC4AE02A5176FB008358F3 /* UIImage+.swift */; };
+		1DCC4AE42A51809F008358F3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCC4AE32A51809F008358F3 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		1DCC4AD42A500605008358F3 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		1DCC4AD62A50060F008358F3 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		1DCC4AD82A500629008358F3 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		1DCC4AE02A5176FB008358F3 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,8 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DCC4ADC2A500FD4008358F3 /* SnapKit in Frameworks */,
 				1DCC4ADF2A500FE0008358F3 /* Then in Frameworks */,
+				1DCC4AE42A51809F008358F3 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +77,7 @@
 				1DCC4AD42A500605008358F3 /* UITextField+.swift */,
 				1DCC4AD82A500629008358F3 /* UIFont+.swift */,
 				1DCC4AD62A50060F008358F3 /* UIButton+.swift */,
+				1DCC4AE02A5176FB008358F3 /* UIImage+.swift */,
 				1DCC4AC42A50038F008358F3 /* Main.storyboard */,
 				1DCC4AC72A500392008358F3 /* Assets.xcassets */,
 				1DCC4AC92A500392008358F3 /* LaunchScreen.storyboard */,
@@ -100,8 +103,8 @@
 			);
 			name = Seminar_2_Tving;
 			packageProductDependencies = (
-				1DCC4ADB2A500FD4008358F3 /* SnapKit */,
 				1DCC4ADE2A500FE0008358F3 /* Then */,
+				1DCC4AE32A51809F008358F3 /* SnapKit */,
 			);
 			productName = Seminar_2_Tving;
 			productReference = 1DCC4ABB2A50038F008358F3 /* Seminar_2_Tving.app */;
@@ -132,8 +135,8 @@
 			);
 			mainGroup = 1DCC4AB22A50038F008358F3;
 			packageReferences = (
-				1DCC4ADA2A500FD4008358F3 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				1DCC4ADD2A500FE0008358F3 /* XCRemoteSwiftPackageReference "Then" */,
+				1DCC4AE22A51809F008358F3 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 1DCC4ABC2A50038F008358F3 /* Products */;
 			projectDirPath = "";
@@ -167,6 +170,7 @@
 				1DCC4AD52A500605008358F3 /* UITextField+.swift in Sources */,
 				1DCC4AD92A500629008358F3 /* UIFont+.swift in Sources */,
 				1DCC4AD32A5005FB008358F3 /* UIColor+.swift in Sources */,
+				1DCC4AE12A5176FB008358F3 /* UIImage+.swift in Sources */,
 				1DCC4ABF2A50038F008358F3 /* AppDelegate.swift in Sources */,
 				1DCC4AC12A50038F008358F3 /* SceneDelegate.swift in Sources */,
 			);
@@ -388,14 +392,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1DCC4ADA2A500FD4008358F3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				branch = develop;
-				kind = branch;
-			};
-		};
 		1DCC4ADD2A500FE0008358F3 /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then.git";
@@ -404,18 +400,26 @@
 				kind = branch;
 			};
 		};
+		1DCC4AE22A51809F008358F3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1DCC4ADB2A500FD4008358F3 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1DCC4ADA2A500FD4008358F3 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
 		1DCC4ADE2A500FE0008358F3 /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1DCC4ADD2A500FE0008358F3 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		1DCC4AE32A51809F008358F3 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DCC4AE22A51809F008358F3 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
