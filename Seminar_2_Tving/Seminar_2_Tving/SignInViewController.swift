@@ -25,9 +25,6 @@ final class SignInViewController: UIViewController {
     private let accountLabel = UILabel()
     private let createButton = UIButton()
     
-    private let idButtonView = UIView()
-    private let passwordButtonView = UIView()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -55,14 +52,15 @@ extension SignInViewController {
             $0.setPlaceholderColor(UIColor.color9C9C9C)
             $0.backgroundColor = UIColor.color2E2E2E
             $0.font = UIFont.tvingSemiBold(ofSize: 15)
-            $0.textColor = UIColor.color000000
+            $0.textColor = UIColor.color9C9C9C
             $0.layer.cornerRadius = 3
-            $0.clearButtonMode = .never
+            $0.autocapitalizationType = .none
             //$0.setLeftPaddingPoints(22)
         }
         
         idClearButton.do {
             $0.setImage(Image.deleteIcon, for: .normal)
+            $0.isHidden = true
         }
         
         passwordTextField.do {
@@ -70,17 +68,20 @@ extension SignInViewController {
             $0.setPlaceholderColor(UIColor.color9C9C9C)
             $0.backgroundColor = UIColor.color2E2E2E
             $0.font = UIFont.tvingSemiBold(ofSize: 15)
-            $0.textColor = UIColor.color000000
+            $0.textColor = UIColor.color9C9C9C
             $0.layer.cornerRadius = 3
+            $0.autocapitalizationType = .none
             //   $0.setLeftPaddingPoints(22)
         }
         
         passwordClearButton.do {
             $0.setImage(Image.deleteIcon, for: .normal)
+            $0.isHidden = true
         }
         
         passwordSecurityButton.do {
             $0.setImage(Image.passwordHideIcon, for: .normal)
+            $0.isHidden = true
         }
         
         signInButton.do {
@@ -118,19 +119,19 @@ extension SignInViewController {
     
     
     private func setLayout() {
-        //         idButtonView.addSubviews(idClearButton)
-        //         passwordButtonView.addSubviews(passwordClearButton, passwordSecurityButton)
-        //         view.addSubviews(backButton, signInLabel, idTextField, passwordTextField, signInButton,idFindButton, betweenView, passwordFindButton, accountLabel, createButton, idButtonView, passwordButtonView)
+        //        [backButton, signInLabel, idTextField, passwordTextField, signInButton,idFindButton, betweenView, passwordFindButton, accountLabel, createButton, idButtonView, passwordButtonView].forEach {
+        //            view.addSubview($0)
+        //        }
+        //        [passwordClearButton, passwordSecurityButton].forEach {
+        //            passwordButtonView.addSubview($0)
+        //        }
+        //        [idClearButton].forEach {
+        //            idButtonView.addSubview($0)
+        //        }
         
-        [backButton, signInLabel, idTextField, passwordTextField, signInButton,idFindButton, betweenView, passwordFindButton, accountLabel, createButton, idButtonView, passwordButtonView].forEach {
-            view.addSubview($0)
-        }
-        [passwordClearButton, passwordSecurityButton].forEach {
-            passwordButtonView.addSubview($0)
-        }
-        [idClearButton].forEach {
-            idButtonView.addSubview($0)
-        }
+        view.addSubviews(backButton, signInLabel, idTextField, passwordTextField, signInButton,idFindButton, betweenView, passwordFindButton, accountLabel, createButton)
+        idTextField.addSubview(idClearButton)
+        passwordTextField.addSubviews(passwordClearButton, passwordSecurityButton)
         
         backButton.snp.makeConstraints{
             $0.top.equalToSuperview().inset(65)
@@ -148,10 +149,28 @@ extension SignInViewController {
             $0.height.equalTo(52)
         }
         
+        idClearButton.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.width.height.equalTo(20)
+            $0.trailing.equalToSuperview().offset(-20)
+        }
+        
         passwordTextField.snp.makeConstraints{
             $0.top.equalTo(idTextField.snp.bottom).offset(7)
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(52)
+        }
+        
+        passwordClearButton.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.height.width.equalTo(20)
+            $0.trailing.equalToSuperview().offset(-56)
+        }
+        
+        passwordSecurityButton.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.height.width.equalTo(20)
+            $0.trailing.equalToSuperview().offset(-20)
         }
         
         signInButton.snp.makeConstraints{
@@ -190,6 +209,35 @@ extension SignInViewController {
             $0.trailing.equalToSuperview().inset(65)
             $0.height.equalTo(22)
         }
-        
+    }
+    private func textFieldBorderSetting(textField: UITextField) {
+        textField.layer.borderColor = UIColor.color2E2E2E
+        textField.layer.borderWidth = 1
+        textfield.placeholder = .none
+    }
+    
+    private func textFieldButtonSetting(textField: UITextField) {
+        switch textField
+        {
+        case
+            
+        default
+        }
+    }
+}
+extension SignInViewController : UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textFieldBorderSetting(textField: textField)
+        textFieldButtonSetting(textField: textField)
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharatersIn range: NSRange, replacementString string: String) -> Bool{
+        textFieldButtonSetting(textField: textField)
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textFieldButtonSetting(textField: textField)
+        textField.layer.borderWidth = 0
     }
 }
