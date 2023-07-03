@@ -119,19 +119,15 @@ extension SignInViewController {
     
     
     private func setLayout() {
-        //        [backButton, signInLabel, idTextField, passwordTextField, signInButton,idFindButton, betweenView, passwordFindButton, accountLabel, createButton, idButtonView, passwordButtonView].forEach {
-        //            view.addSubview($0)
-        //        }
-        //        [passwordClearButton, passwordSecurityButton].forEach {
-        //            passwordButtonView.addSubview($0)
-        //        }
-        //        [idClearButton].forEach {
-        //            idButtonView.addSubview($0)
-        //        }
-        
-        view.addSubviews(backButton, signInLabel, idTextField, passwordTextField, signInButton,idFindButton, betweenView, passwordFindButton, accountLabel, createButton)
-        idTextField.addSubview(idClearButton)
-        passwordTextField.addSubviews(passwordClearButton, passwordSecurityButton)
+        [backButton, signInLabel, idTextField, passwordTextField, signInButton,idFindButton, betweenView, passwordFindButton, accountLabel, createButton].forEach {
+            view.addSubview($0)
+        }
+        [idClearButton].forEach {
+            idTextField.addSubview($0)
+        }
+        [passwordClearButton, passwordSecurityButton].forEach {
+            passwordTextField.addSubview($0)
+        }
         
         backButton.snp.makeConstraints{
             $0.top.equalToSuperview().inset(65)
@@ -211,17 +207,27 @@ extension SignInViewController {
         }
     }
     private func textFieldBorderSetting(textField: UITextField) {
-        textField.layer.borderColor = UIColor.color2E2E2E
+        textField.layer.borderColor = UIColor.colorFF143C.cgColor
         textField.layer.borderWidth = 1
-        textfield.placeholder = .none
+        textField.placeholder = .none
     }
     
     private func textFieldButtonSetting(textField: UITextField) {
         switch textField
         {
-        case
-            
-        default
+        case idTextField:
+            if idTextField.hasText && idTextField.isEditing{
+                idClearButton.isHidden = false
+            }else {
+                idClearButton.isHidden = true
+            }
+        case passwordTextField:
+            if passwordTextField.hasText && passwordTextField.isEditing {
+                passwordClearButton.isHidden = false
+                passwordSecurityButton.isHidden = true
+            }
+        default:
+            return
         }
     }
 }
@@ -231,9 +237,9 @@ extension SignInViewController : UITextFieldDelegate {
         textFieldButtonSetting(textField: textField)
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharatersIn range: NSRange, replacementString string: String) -> Bool{
-        textFieldButtonSetting(textField: textField)
-        return true
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+         textFieldButtonSetting(textField: textField)
+         return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
