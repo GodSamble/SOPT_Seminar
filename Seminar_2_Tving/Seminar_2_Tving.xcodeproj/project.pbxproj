@@ -20,6 +20,7 @@
 		1DCC4ADF2A500FE0008358F3 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCC4ADE2A500FE0008358F3 /* Then */; };
 		1DCC4AE12A5176FB008358F3 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC4AE02A5176FB008358F3 /* UIImage+.swift */; };
 		1DCC4AE72A51858F008358F3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCC4AE62A51858F008358F3 /* SnapKit */; };
+		1DCC4AE92A5342E1008358F3 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC4AE82A5342E1008358F3 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		1DCC4AD62A50060F008358F3 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		1DCC4AD82A500629008358F3 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		1DCC4AE02A5176FB008358F3 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		1DCC4AE82A5342E1008358F3 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				1DCC4ABE2A50038F008358F3 /* AppDelegate.swift */,
 				1DCC4AC02A50038F008358F3 /* SceneDelegate.swift */,
 				1DCC4AC22A50038F008358F3 /* SignInViewController.swift */,
+				1DCC4AE82A5342E1008358F3 /* WelcomeViewController.swift */,
 				1DCC4AD22A5005FB008358F3 /* UIColor+.swift */,
 				1DCC4AD42A500605008358F3 /* UITextField+.swift */,
 				1DCC4AD82A500629008358F3 /* UIFont+.swift */,
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DCC4AE92A5342E1008358F3 /* WelcomeViewController.swift in Sources */,
 				1DCC4AC32A50038F008358F3 /* SignInViewController.swift in Sources */,
 				1DCC4AD72A50060F008358F3 /* UIButton+.swift in Sources */,
 				1DCC4AD52A500605008358F3 /* UITextField+.swift in Sources */,
