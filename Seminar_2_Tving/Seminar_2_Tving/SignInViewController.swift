@@ -29,6 +29,7 @@ final class SignInViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         setLayout()
+        setDelegate()
     }
 }
 
@@ -86,6 +87,12 @@ extension SignInViewController {
         
         signInButton.do {
             $0.setTitle("로그인하기", for: .normal)
+            $0.titleLabel?.font = UIFont.tvingSemiBold(ofSize: 14)
+            $0.setTitleColor(UIColor.color9C9C9C, for: .normal)
+            $0.layer.borderColor = UIColor.color9C9C9C.cgColor
+            $0.layer.borderWidth = 1
+            $0.layer.cornerRadius = 3
+            $0.isEnabled = false
         }
         
         idFindButton.do {
@@ -206,6 +213,11 @@ extension SignInViewController {
             $0.height.equalTo(22)
         }
     }
+    private func setDelegate() {
+        idTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+    
     private func textFieldBorderSetting(textField: UITextField) {
         textField.layer.borderColor = UIColor.colorFF143C.cgColor
         textField.layer.borderWidth = 1
@@ -230,7 +242,21 @@ extension SignInViewController {
             return
         }
     }
+    
+    private func loginButtonActivate() {
+        if signInButton.isEnabled == true {
+            signInButton.backgroundColor = UIColor.colorFF143C
+            signInButton.setTitleColor(UIColor.colorFFFFFF, for: .normal)
+            signInButton.layer.borderWidth = 0
+        } else {
+            signInButton.setTitleColor(UIColor.color9C9C9C, for: .normal)
+            signInButton.backgroundColor = UIColor.color000000
+            signInButton.layer.borderWidth = 1
+        }
+    }
 }
+
+
 extension SignInViewController : UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textFieldBorderSetting(textField: textField)
@@ -238,8 +264,15 @@ extension SignInViewController : UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-         textFieldButtonSetting(textField: textField)
-         return true
+        textFieldButtonSetting(textField: textField)
+        if idTextField.hasText && passwordTextField.hasText {
+            signInButton.isEnabled = true
+            loginButtonActivate()
+        } else {
+            signInButton.isEnabled = false
+            loginButtonActivate()
+        }
+        return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

@@ -5,12 +5,17 @@
       "scale" : "1x"
     },
     {
-      "filename" : "eye-slash@3x 2@2x.png",
+      "filename" : "x-circle@3x 2@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "eye-slash@3x 2@3x.png",
+      "filename" : "x-circle@3x 2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    },
+    {
+      "filename" : "x-circle@3x 2@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
