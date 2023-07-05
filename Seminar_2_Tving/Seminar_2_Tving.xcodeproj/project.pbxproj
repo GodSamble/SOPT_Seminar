@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D3CBAAB2A5501E500AE8138 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CBAAA2A5501E500AE8138 /* NicknameViewController.swift */; };
 		1DCC4ABF2A50038F008358F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC4ABE2A50038F008358F3 /* AppDelegate.swift */; };
 		1DCC4AC12A50038F008358F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC4AC02A50038F008358F3 /* SceneDelegate.swift */; };
 		1DCC4AC32A50038F008358F3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC4AC22A50038F008358F3 /* SignInViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D3CBAAA2A5501E500AE8138 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 		1DCC4ABB2A50038F008358F3 /* Seminar_2_Tving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seminar_2_Tving.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DCC4ABE2A50038F008358F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DCC4AC02A50038F008358F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				1DCC4AC72A500392008358F3 /* Assets.xcassets */,
 				1DCC4AC92A500392008358F3 /* LaunchScreen.storyboard */,
 				1DCC4ACC2A500392008358F3 /* Info.plist */,
+				1D3CBAAA2A5501E500AE8138 /* NicknameViewController.swift */,
 			);
 			path = Seminar_2_Tving;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				1DCC4AD52A500605008358F3 /* UITextField+.swift in Sources */,
 				1DCC4AD92A500629008358F3 /* UIFont+.swift in Sources */,
 				1DCC4AD32A5005FB008358F3 /* UIColor+.swift in Sources */,
+				1D3CBAAB2A5501E500AE8138 /* NicknameViewController.swift in Sources */,
 				1DCC4AE12A5176FB008358F3 /* UIImage+.swift in Sources */,
 				1DCC4ABF2A50038F008358F3 /* AppDelegate.swift in Sources */,
 				1DCC4AC12A50038F008358F3 /* SceneDelegate.swift in Sources */,
