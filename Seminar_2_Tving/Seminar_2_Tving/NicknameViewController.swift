@@ -9,7 +9,14 @@ import UIKit
 import SnapKit
 import Then
 
+protocol DataBindProtocol: AnyObject {
+    func dataBind(userNickName: String)
+}
+
 final class NicknameViewController: UIViewController {
+    
+    weak var delegate: DataBindProtocol?
+    
     private let nicknameLabel = UILabel()
     private let nicknameTextField = UITextField()
     private let nicknameSaveButton = UIButton()
@@ -78,6 +85,8 @@ extension NicknameViewController {
     
     @objc
     private func nicknameSaveButtonTapped() {
+        guard let text = nicknameTextField.text else { return }
+        delegate?.dataBind(userNickName: text)
         self.dismiss(animated: true)
     }
     

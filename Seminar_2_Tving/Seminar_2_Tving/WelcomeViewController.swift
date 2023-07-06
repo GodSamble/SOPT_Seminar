@@ -11,18 +11,16 @@ import Then
 
 final class WelcomeViewController: UIViewController {
     
-    var userID : String?
-    
     private let logoView = UIImageView()
     private let welcomeLabel = UILabel()
     private let moveMainButton = UIButton()
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
         setLayout()
         setAddTarget()
-        setDataBind()
+        setDataBind(userNickName: "")
     }
 }
 extension WelcomeViewController {
@@ -82,9 +80,7 @@ extension WelcomeViewController {
             self.navigationController?.popViewController(animated: true)
         }
     }
-    
-    private func setDataBind() {
-        guard let userID = self.userID else {return}
-        welcomeLabel.text = "\(userID)님 반가워요!"
+    func setDataBind(userNickName : String) {
+        welcomeLabel.text = "\(userNickName)님 반가워요!"
     }
 }

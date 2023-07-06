@@ -25,6 +25,8 @@ final class SignInViewController: UIViewController, UISheetPresentationControlle
     private let accountLabel = UILabel()
     private let createNicknameButton = UIButton()
     
+    var nickname: String = "아무 입력 안됨"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -219,13 +221,13 @@ extension SignInViewController {
         
         accountLabel.snp.makeConstraints{
             $0.top.equalTo(idFindButton.snp.bottom).offset(28)
-            $0.leading.equalToSuperview().inset(51)
+            $0.leading.equalToSuperview().inset(30)
             $0.height.equalTo(22)
         }
         
         createNicknameButton.snp.makeConstraints{
             $0.top.equalTo(passwordFindButton.snp.bottom).offset(28)
-            $0.trailing.equalToSuperview().inset(65)
+            $0.trailing.equalToSuperview().inset(44)
             $0.height.equalTo(22)
         }
     }
@@ -258,16 +260,19 @@ extension SignInViewController {
     }
     
     @objc
-    private func signInButtonTapped() {
+    func signInButtonTapped() {
         let welcomeViewController = WelcomeViewController()
-        welcomeViewController.userID = idTextField.text
-        self.navigationController?.pushViewController(welcomeViewController, animated: true)
+        print(nickname)
         
+        self.present(welcomeViewController, animated: true) { [weak self] in
+            welcomeViewController.setDataBind(userNickName: self?.nickname ?? "")
+        }
     }
     
     @objc
     private func createNicknameButtonTapped() {
         let nicknameViewController = NicknameViewController()
+        nicknameViewController.delegate = self
         if let sheet = nicknameViewController.sheetPresentationController {
             sheet.detents = [.medium(), .large()]
             sheet.delegate = self
@@ -278,7 +283,7 @@ extension SignInViewController {
     }
     
     private func textFieldBorderSetting(textField: UITextField) {
-        textField.layer.borderColor = UIColor.colorFF143C.cgColor
+        textField.layer.borderColor = UIColor.color9C9C9C.cgColor
         textField.layer.borderWidth = 1
         textField.placeholder = .none
     }
@@ -352,5 +357,11 @@ extension SignInViewController : UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         textFieldButtonSetting(textField: textField)
         textField.layer.borderWidth = 0
+    }
+}
+
+extension SignInViewController: DataBindProtocol {
+    func dataBind(userNickName: String) {
+        self.nickname = userNickName
     }
 }
