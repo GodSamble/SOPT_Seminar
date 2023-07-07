@@ -18,6 +18,7 @@
 		1D3CBAD12A5805D200AE8138 /* CarrotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CBAD02A5805D200AE8138 /* CarrotTableViewCell.swift */; };
 		1D3CBAD42A5805FF00AE8138 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1D3CBAD32A5805FF00AE8138 /* SnapKit */; };
 		1D3CBAD72A58061100AE8138 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 1D3CBAD62A58061100AE8138 /* Then */; };
+		1D3CBADB2A58728600AE8138 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CBADA2A58728600AE8138 /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1D3CBACC2A57FC3F00AE8138 /* Carrot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrot.swift; sourceTree = "<group>"; };
 		1D3CBACE2A57FE6900AE8138 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		1D3CBAD02A5805D200AE8138 /* CarrotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTableViewCell.swift; sourceTree = "<group>"; };
+		1D3CBADA2A58728600AE8138 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				1D3CBACC2A57FC3F00AE8138 /* Carrot.swift */,
 				1D3CBACE2A57FE6900AE8138 /* UIImage+.swift */,
 				1D3CBAD02A5805D200AE8138 /* CarrotTableViewCell.swift */,
+				1D3CBADA2A58728600AE8138 /* UIView+.swift */,
 			);
 			path = seminar_3;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			files = (
 				1D3CBAD12A5805D200AE8138 /* CarrotTableViewCell.swift in Sources */,
 				1D3CBABD2A57FB2400AE8138 /* CarrotViewController.swift in Sources */,
+				1D3CBADB2A58728600AE8138 /* UIView+.swift in Sources */,
 				1D3CBAB92A57FB2400AE8138 /* AppDelegate.swift in Sources */,
 				1D3CBACF2A57FE6900AE8138 /* UIImage+.swift in Sources */,
 				1D3CBACD2A57FC3F00AE8138 /* Carrot.swift in Sources */,
