@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CarrotViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

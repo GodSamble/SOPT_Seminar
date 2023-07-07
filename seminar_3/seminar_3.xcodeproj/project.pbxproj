@@ -9,25 +9,29 @@
 /* Begin PBXBuildFile section */
 		1D3CBAB92A57FB2400AE8138 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CBAB82A57FB2400AE8138 /* AppDelegate.swift */; };
 		1D3CBABB2A57FB2400AE8138 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CBABA2A57FB2400AE8138 /* SceneDelegate.swift */; };
-		1D3CBABD2A57FB2400AE8138 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CBABC2A57FB2400AE8138 /* ViewController.swift */; };
+		1D3CBABD2A57FB2400AE8138 /* CarrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CBABC2A57FB2400AE8138 /* CarrotViewController.swift */; };
 		1D3CBAC02A57FB2400AE8138 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D3CBABE2A57FB2400AE8138 /* Main.storyboard */; };
 		1D3CBAC22A57FB2600AE8138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D3CBAC12A57FB2600AE8138 /* Assets.xcassets */; };
 		1D3CBAC52A57FB2600AE8138 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D3CBAC32A57FB2600AE8138 /* LaunchScreen.storyboard */; };
 		1D3CBACD2A57FC3F00AE8138 /* Carrot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CBACC2A57FC3F00AE8138 /* Carrot.swift */; };
 		1D3CBACF2A57FE6900AE8138 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CBACE2A57FE6900AE8138 /* UIImage+.swift */; };
+		1D3CBAD12A5805D200AE8138 /* CarrotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CBAD02A5805D200AE8138 /* CarrotTableViewCell.swift */; };
+		1D3CBAD42A5805FF00AE8138 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1D3CBAD32A5805FF00AE8138 /* SnapKit */; };
+		1D3CBAD72A58061100AE8138 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 1D3CBAD62A58061100AE8138 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D3CBAB52A57FB2400AE8138 /* seminar_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seminar_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D3CBAB82A57FB2400AE8138 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D3CBABA2A57FB2400AE8138 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1D3CBABC2A57FB2400AE8138 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D3CBABC2A57FB2400AE8138 /* CarrotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotViewController.swift; sourceTree = "<group>"; };
 		1D3CBABF2A57FB2400AE8138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D3CBAC12A57FB2600AE8138 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D3CBAC42A57FB2600AE8138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D3CBAC62A57FB2600AE8138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D3CBACC2A57FC3F00AE8138 /* Carrot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrot.swift; sourceTree = "<group>"; };
 		1D3CBACE2A57FE6900AE8138 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		1D3CBAD02A5805D200AE8138 /* CarrotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D3CBAD42A5805FF00AE8138 /* SnapKit in Frameworks */,
+				1D3CBAD72A58061100AE8138 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,13 +68,14 @@
 			children = (
 				1D3CBAB82A57FB2400AE8138 /* AppDelegate.swift */,
 				1D3CBABA2A57FB2400AE8138 /* SceneDelegate.swift */,
-				1D3CBABC2A57FB2400AE8138 /* ViewController.swift */,
+				1D3CBABC2A57FB2400AE8138 /* CarrotViewController.swift */,
 				1D3CBABE2A57FB2400AE8138 /* Main.storyboard */,
 				1D3CBAC12A57FB2600AE8138 /* Assets.xcassets */,
 				1D3CBAC32A57FB2600AE8138 /* LaunchScreen.storyboard */,
 				1D3CBAC62A57FB2600AE8138 /* Info.plist */,
 				1D3CBACC2A57FC3F00AE8138 /* Carrot.swift */,
 				1D3CBACE2A57FE6900AE8138 /* UIImage+.swift */,
+				1D3CBAD02A5805D200AE8138 /* CarrotTableViewCell.swift */,
 			);
 			path = seminar_3;
 			sourceTree = "<group>";
@@ -89,6 +96,10 @@
 			dependencies = (
 			);
 			name = seminar_3;
+			packageProductDependencies = (
+				1D3CBAD32A5805FF00AE8138 /* SnapKit */,
+				1D3CBAD62A58061100AE8138 /* Then */,
+			);
 			productName = seminar_3;
 			productReference = 1D3CBAB52A57FB2400AE8138 /* seminar_3.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +128,10 @@
 				Base,
 			);
 			mainGroup = 1D3CBAAC2A57FB2400AE8138;
+			packageReferences = (
+				1D3CBAD22A5805FF00AE8138 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1D3CBAD52A58061100AE8138 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = 1D3CBAB62A57FB2400AE8138 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,7 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D3CBABD2A57FB2400AE8138 /* ViewController.swift in Sources */,
+				1D3CBAD12A5805D200AE8138 /* CarrotTableViewCell.swift in Sources */,
+				1D3CBABD2A57FB2400AE8138 /* CarrotViewController.swift in Sources */,
 				1D3CBAB92A57FB2400AE8138 /* AppDelegate.swift in Sources */,
 				1D3CBACF2A57FE6900AE8138 /* UIImage+.swift in Sources */,
 				1D3CBACD2A57FC3F00AE8138 /* Carrot.swift in Sources */,
@@ -366,6 +382,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1D3CBAD22A5805FF00AE8138 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		1D3CBAD52A58061100AE8138 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1D3CBAD32A5805FF00AE8138 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D3CBAD22A5805FF00AE8138 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		1D3CBAD62A58061100AE8138 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D3CBAD52A58061100AE8138 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1D3CBAAD2A57FB2400AE8138 /* Project object */;
 }
