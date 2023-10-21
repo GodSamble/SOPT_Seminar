@@ -6,15 +6,21 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 final class NicknameViewModel {
-    private var nickname: String = "아무 입력 안됨"
+    private var nicknameSubject = BehaviorSubject<String>(value: "아무 입력 안됨")
+    
+    var nickname: Observable<String> {
+        return nicknameSubject.asObservable()
+    }
     
     func bindData(nickname: String) {
-        self.nickname = nickname
+        nicknameSubject.onNext(nickname)
     }
     
     func getNickname() -> String {
-        return nickname
+        return (try? nicknameSubject.value()) ?? "아무 입력 안됨"
     }
 }
