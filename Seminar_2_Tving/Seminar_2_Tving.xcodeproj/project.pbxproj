@@ -13,6 +13,8 @@
 		1D9CF0272AE2D11A000FDF12 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1D9CF0262AE2D11A000FDF12 /* RxCocoa */; };
 		1D9CF0292AE2D11A000FDF12 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1D9CF0282AE2D11A000FDF12 /* RxCocoa-Dynamic */; };
 		1D9CF02B2AE2D11A000FDF12 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 1D9CF02A2AE2D11A000FDF12 /* RxRelay */; };
+		1D9CF0312AE2D2B1000FDF12 /* NicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9CF0302AE2D2B1000FDF12 /* NicknameViewModel.swift */; };
+		1D9CF0332AE2D2CC000FDF12 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9CF0322AE2D2CC000FDF12 /* SignInViewModel.swift */; };
 		1DCC4ABF2A50038F008358F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC4ABE2A50038F008358F3 /* AppDelegate.swift */; };
 		1DCC4AC12A50038F008358F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC4AC02A50038F008358F3 /* SceneDelegate.swift */; };
 		1DCC4AC32A50038F008358F3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC4AC22A50038F008358F3 /* SignInViewController.swift */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		1D3CBAAA2A5501E500AE8138 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
+		1D9CF0302AE2D2B1000FDF12 /* NicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewModel.swift; sourceTree = "<group>"; };
+		1D9CF0322AE2D2CC000FDF12 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		1DCC4ABB2A50038F008358F3 /* Seminar_2_Tving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seminar_2_Tving.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DCC4ABE2A50038F008358F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DCC4AC02A50038F008358F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D9CF02C2AE2D23B000FDF12 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D9CF02D2AE2D25A000FDF12 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1D9CF0302AE2D2B1000FDF12 /* NicknameViewModel.swift */,
+				1D9CF0322AE2D2CC000FDF12 /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D9CF02E2AE2D260000FDF12 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D3CBAAA2A5501E500AE8138 /* NicknameViewController.swift */,
+				1DCC4AE82A5342E1008358F3 /* WelcomeViewController.swift */,
+				1DCC4AC22A50038F008358F3 /* SignInViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D9CF02F2AE2D274000FDF12 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				1DCC4AE02A5176FB008358F3 /* UIImage+.swift */,
+				1DCC4AD62A50060F008358F3 /* UIButton+.swift */,
+				1DCC4AD82A500629008358F3 /* UIFont+.swift */,
+				1DCC4AD42A500605008358F3 /* UITextField+.swift */,
+				1DCC4AD22A5005FB008358F3 /* UIColor+.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		1DCC4AB22A50038F008358F3 = {
 			isa = PBXGroup;
 			children = (
@@ -84,16 +126,12 @@
 		1DCC4ABD2A50038F008358F3 /* Seminar_2_Tving */ = {
 			isa = PBXGroup;
 			children = (
+				1D9CF02F2AE2D274000FDF12 /* Global */,
+				1D9CF02E2AE2D260000FDF12 /* View */,
+				1D9CF02D2AE2D25A000FDF12 /* ViewModel */,
+				1D9CF02C2AE2D23B000FDF12 /* Model */,
 				1DCC4ABE2A50038F008358F3 /* AppDelegate.swift */,
 				1DCC4AC02A50038F008358F3 /* SceneDelegate.swift */,
-				1DCC4AC22A50038F008358F3 /* SignInViewController.swift */,
-				1DCC4AE82A5342E1008358F3 /* WelcomeViewController.swift */,
-				1D3CBAAA2A5501E500AE8138 /* NicknameViewController.swift */,
-				1DCC4AD22A5005FB008358F3 /* UIColor+.swift */,
-				1DCC4AD42A500605008358F3 /* UITextField+.swift */,
-				1DCC4AD82A500629008358F3 /* UIFont+.swift */,
-				1DCC4AD62A50060F008358F3 /* UIButton+.swift */,
-				1DCC4AE02A5176FB008358F3 /* UIImage+.swift */,
 				1DCC4AC42A50038F008358F3 /* Main.storyboard */,
 				1DCC4AC72A500392008358F3 /* Assets.xcassets */,
 				1DCC4AC92A500392008358F3 /* LaunchScreen.storyboard */,
@@ -187,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D9CF0312AE2D2B1000FDF12 /* NicknameViewModel.swift in Sources */,
 				1DCC4AE92A5342E1008358F3 /* WelcomeViewController.swift in Sources */,
 				1DCC4AC32A50038F008358F3 /* SignInViewController.swift in Sources */,
 				1DCC4AD72A50060F008358F3 /* UIButton+.swift in Sources */,
@@ -194,6 +233,7 @@
 				1DCC4AD92A500629008358F3 /* UIFont+.swift in Sources */,
 				1DCC4AD32A5005FB008358F3 /* UIColor+.swift in Sources */,
 				1D3CBAAB2A5501E500AE8138 /* NicknameViewController.swift in Sources */,
+				1D9CF0332AE2D2CC000FDF12 /* SignInViewModel.swift in Sources */,
 				1DCC4AE12A5176FB008358F3 /* UIImage+.swift in Sources */,
 				1DCC4ABF2A50038F008358F3 /* AppDelegate.swift in Sources */,
 				1DCC4AC12A50038F008358F3 /* SceneDelegate.swift in Sources */,

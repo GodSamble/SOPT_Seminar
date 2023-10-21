@@ -8,19 +8,24 @@
 import UIKit
 import SnapKit
 import Then
+import RxSwift
+import RxCocoa
 
 final class WelcomeViewController: UIViewController {
     
+    
+    private let disposeBag = DisposeBag()
     private let logoView = UIImageView()
     private let welcomeLabel = UILabel()
     private let moveMainButton = UIButton()
+    var userNickname: String = ""
  
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
         setLayout()
         setAddTarget()
-        setDataBind(userNickName: "")
+        setBindings()
     }
 }
 extension WelcomeViewController {
@@ -45,6 +50,27 @@ extension WelcomeViewController {
             $0.backgroundColor = UIColor.colorFF143C
             $0.titleLabel?.textAlignment = .center
             $0.layer.cornerRadius = 3
+        }
+    }
+    
+    private func setBindings() {
+        Observable.just(userNickname)
+            .map{ "\($0)님 반가워요!" }
+            .bind(to: welcomeLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        moveMainButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.handleMoveMainButtonTap()
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func handleMoveMainButtonTap() {
+        if self.navigationController == nil {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            self.navigationController?.popViewController(animated: true)
         }
     }
     

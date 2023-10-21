@@ -8,6 +8,8 @@
 import UIKit
 import SnapKit
 import Then
+import RxSwift
+import RxCocoa
 
 protocol DataBindProtocol: AnyObject {
     func dataBind(userNickName: String)
@@ -17,6 +19,7 @@ final class NicknameViewController: UIViewController {
     
     weak var delegate: DataBindProtocol?
     
+    private let disposeBag = DisposeBag()
     private let nicknameLabel = UILabel()
     private let nicknameTextField = UITextField()
     private let nicknameSaveButton = UIButton()
@@ -26,6 +29,7 @@ final class NicknameViewController: UIViewController {
         setLayout()
         setTarget()
         setDelegate()
+        setBindings()
     }
 }
 
@@ -52,6 +56,21 @@ extension NicknameViewController {
             $0.layer.cornerRadius = 12
             $0.isEnabled = false
         }
+    }
+    
+    private func setBindings() {
+        nicknameTextField.rx.text.orEmpty
+            .map { !$0.isEmpty }
+            .bind(to: nicknameSaveButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        nicknameSaveButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let text = self?.nicknameTextField.text else { return }
+                self?.delegate?.dataBind(userNickName: text)
+                self?.dismiss(animated: true)
+            })
+            .disposed(by: disposeBag)
     }
     
     private func setLayout() {
