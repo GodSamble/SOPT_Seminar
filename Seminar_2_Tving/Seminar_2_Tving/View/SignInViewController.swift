@@ -8,9 +8,13 @@
 import UIKit
 import SnapKit
 import Then
+import RxSwift
+import RxCocoa
 
 final class SignInViewController: UIViewController, UISheetPresentationControllerDelegate {
     
+    private let disposeBag = DisposeBag()
+    private let signinViewModel = SignInViewModel()
     private let backButton = UIButton()
     private let signInLabel = UILabel()
     private let idTextField = UITextField()
@@ -142,6 +146,28 @@ extension SignInViewController {
         signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         createNicknameButton.addTarget(self, action: #selector(createNicknameButtonTapped), for: .touchUpInside)
      }
+    
+    private func setBindings() {
+        idTextField.rx.text.orEmpty
+            .bind(to: signinViewModel.id)
+            .disposed(by: disposeBag)
+        
+        passwordTextField.rx.text.orEmpty
+            .bind(to: signinViewModel.password)
+            .disposed(by: disposeBag)
+        
+        signinViewModel.isValid
+            .bind(to: signInButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        signInButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                //                self?.signinViewModel.signin
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    
 
     private func setLayout() {
         [backButton, signInLabel, idTextField, passwordTextField, signInButton,idFindButton, betweenView, passwordFindButton, accountLabel, createNicknameButton].forEach {
