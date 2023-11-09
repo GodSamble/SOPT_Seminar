@@ -289,10 +289,8 @@ extension SignInViewController {
     func signInButtonTapped() {
         let welcomeViewController = WelcomeViewController()
         print(nickname)
-        
-        self.present(welcomeViewController, animated: true) { [weak self] in
-            welcomeViewController.setDataBind(userNickName: self?.nickname ?? "")
-        }
+        welcomeViewController.userNickname = self.nickname ?? ""
+        self.navigationController?.pushViewController(welcomeViewController, animated: true)
     }
     
     @objc

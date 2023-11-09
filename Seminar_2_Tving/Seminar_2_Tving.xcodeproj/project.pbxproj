@@ -15,6 +15,11 @@
 		1D9CF02B2AE2D11A000FDF12 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 1D9CF02A2AE2D11A000FDF12 /* RxRelay */; };
 		1D9CF0312AE2D2B1000FDF12 /* NicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9CF0302AE2D2B1000FDF12 /* NicknameViewModel.swift */; };
 		1D9CF0332AE2D2CC000FDF12 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9CF0322AE2D2CC000FDF12 /* SignInViewModel.swift */; };
+		1D9CF0492AE6DB8C000FDF12 /* MainHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9CF0482AE6DB8C000FDF12 /* MainHomeView.swift */; };
+		1DBC33FA2AF769620015FF23 /* ThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBC33F92AF769620015FF23 /* ThumbnailCell.swift */; };
+		1DBC33FC2AF7697D0015FF23 /* ContentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBC33FB2AF7697D0015FF23 /* ContentsCollectionViewCell.swift */; };
+		1DBC33FE2AF769940015FF23 /* LogoFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBC33FD2AF769940015FF23 /* LogoFooterCell.swift */; };
+		1DBC34082AF9FB0E0015FF23 /* ThumnailUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBC34072AF9FB0E0015FF23 /* ThumnailUIView.swift */; };
 		1DCC4ABF2A50038F008358F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC4ABE2A50038F008358F3 /* AppDelegate.swift */; };
 		1DCC4AC12A50038F008358F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC4AC02A50038F008358F3 /* SceneDelegate.swift */; };
 		1DCC4AC32A50038F008358F3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC4AC22A50038F008358F3 /* SignInViewController.swift */; };
@@ -35,6 +40,11 @@
 		1D3CBAAA2A5501E500AE8138 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 		1D9CF0302AE2D2B1000FDF12 /* NicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewModel.swift; sourceTree = "<group>"; };
 		1D9CF0322AE2D2CC000FDF12 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		1D9CF0482AE6DB8C000FDF12 /* MainHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeView.swift; sourceTree = "<group>"; };
+		1DBC33F92AF769620015FF23 /* ThumbnailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailCell.swift; sourceTree = "<group>"; };
+		1DBC33FB2AF7697D0015FF23 /* ContentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsCollectionViewCell.swift; sourceTree = "<group>"; };
+		1DBC33FD2AF769940015FF23 /* LogoFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoFooterCell.swift; sourceTree = "<group>"; };
+		1DBC34072AF9FB0E0015FF23 /* ThumnailUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumnailUIView.swift; sourceTree = "<group>"; };
 		1DCC4ABB2A50038F008358F3 /* Seminar_2_Tving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seminar_2_Tving.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DCC4ABE2A50038F008358F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DCC4AC02A50038F008358F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +117,58 @@
 			path = Global;
 			sourceTree = "<group>";
 		};
+		1DBC33F32AF768880015FF23 /* MainHome */ = {
+			isa = PBXGroup;
+			children = (
+				1DBC33F62AF7689F0015FF23 /* Model */,
+				1DBC33F52AF7689A0015FF23 /* ViewModel */,
+				1DBC33F42AF768960015FF23 /* View */,
+			);
+			path = MainHome;
+			sourceTree = "<group>";
+		};
+		1DBC33F42AF768960015FF23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DBC33F82AF768C40015FF23 /* Cell */,
+				1DBC33F72AF768BE0015FF23 /* VC */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1DBC33F52AF7689A0015FF23 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1DBC33F62AF7689F0015FF23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1DBC33F72AF768BE0015FF23 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				1D9CF0482AE6DB8C000FDF12 /* MainHomeView.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		1DBC33F82AF768C40015FF23 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1DBC34072AF9FB0E0015FF23 /* ThumnailUIView.swift */,
+				1DBC33F92AF769620015FF23 /* ThumbnailCell.swift */,
+				1DBC33FB2AF7697D0015FF23 /* ContentsCollectionViewCell.swift */,
+				1DBC33FD2AF769940015FF23 /* LogoFooterCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		1DCC4AB22A50038F008358F3 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +188,7 @@
 		1DCC4ABD2A50038F008358F3 /* Seminar_2_Tving */ = {
 			isa = PBXGroup;
 			children = (
+				1DBC33F32AF768880015FF23 /* MainHome */,
 				1D9CF02F2AE2D274000FDF12 /* Global */,
 				1D9CF02E2AE2D260000FDF12 /* View */,
 				1D9CF02D2AE2D25A000FDF12 /* ViewModel */,
@@ -226,17 +289,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D9CF0312AE2D2B1000FDF12 /* NicknameViewModel.swift in Sources */,
+				1DBC33FC2AF7697D0015FF23 /* ContentsCollectionViewCell.swift in Sources */,
 				1DCC4AE92A5342E1008358F3 /* WelcomeViewController.swift in Sources */,
+				1DBC33FA2AF769620015FF23 /* ThumbnailCell.swift in Sources */,
 				1DCC4AC32A50038F008358F3 /* SignInViewController.swift in Sources */,
 				1DCC4AD72A50060F008358F3 /* UIButton+.swift in Sources */,
 				1DCC4AD52A500605008358F3 /* UITextField+.swift in Sources */,
+				1DBC34082AF9FB0E0015FF23 /* ThumnailUIView.swift in Sources */,
 				1DCC4AD92A500629008358F3 /* UIFont+.swift in Sources */,
 				1DCC4AD32A5005FB008358F3 /* UIColor+.swift in Sources */,
 				1D3CBAAB2A5501E500AE8138 /* NicknameViewController.swift in Sources */,
 				1D9CF0332AE2D2CC000FDF12 /* SignInViewModel.swift in Sources */,
 				1DCC4AE12A5176FB008358F3 /* UIImage+.swift in Sources */,
+				1D9CF0492AE6DB8C000FDF12 /* MainHomeView.swift in Sources */,
 				1DCC4ABF2A50038F008358F3 /* AppDelegate.swift in Sources */,
 				1DCC4AC12A50038F008358F3 /* SceneDelegate.swift in Sources */,
+				1DBC33FE2AF769940015FF23 /* LogoFooterCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

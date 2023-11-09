@@ -18,13 +18,13 @@ final class WelcomeViewController: UIViewController {
     private let logoView = UIImageView()
     private let welcomeLabel = UILabel()
     private let moveMainButton = UIButton()
+    private let moveHomeButton = UIButton()
     var userNickname: String = ""
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
         setLayout()
-        setAddTarget()
         setBindings()
     }
 }
@@ -44,7 +44,16 @@ extension WelcomeViewController {
         }
         
         moveMainButton.do {
-            $0.setTitle("메인으로", for: .normal)
+            $0.setTitle("로그인창으로", for: .normal)
+            $0.titleLabel?.font = UIFont.tvingSemiBold(ofSize: 14);
+            $0.setTitleColor(UIColor.colorFFFFFF, for: .normal)
+            $0.backgroundColor = UIColor.colorFF143C
+            $0.titleLabel?.textAlignment = .center
+            $0.layer.cornerRadius = 3
+        }
+        
+        moveHomeButton.do {
+            $0.setTitle("메인홈으로", for: .normal)
             $0.titleLabel?.font = UIFont.tvingSemiBold(ofSize: 14);
             $0.setTitleColor(UIColor.colorFFFFFF, for: .normal)
             $0.backgroundColor = UIColor.colorFF143C
@@ -64,6 +73,12 @@ extension WelcomeViewController {
                 self?.handleMoveMainButtonTap()
             })
             .disposed(by: disposeBag)
+        
+        moveHomeButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.handleMoveHomeButtonTap()
+            })
+            .disposed(by: disposeBag)
     }
     
     private func handleMoveMainButtonTap() {
@@ -73,9 +88,13 @@ extension WelcomeViewController {
             self.navigationController?.popViewController(animated: true)
         }
     }
+    private func handleMoveHomeButtonTap() {
+        let mainHomeView = MainHomeView()
+        self.navigationController?.pushViewController(mainHomeView, animated: true)
+    }
     
     private func setLayout() {
-        [logoView, welcomeLabel, moveMainButton].forEach {
+        [logoView, welcomeLabel, moveMainButton, moveHomeButton].forEach {
             view.addSubview($0)
         }
         
@@ -92,21 +111,10 @@ extension WelcomeViewController {
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(52)
         }
-    }
-    
-    private func setAddTarget() {
-        moveMainButton.addTarget(self, action: #selector(moveMainButtonTapped), for: .touchUpInside)
-    }
-    
-    @objc
-    private func moveMainButtonTapped(){
-        if self.navigationController == nil {
-            self.dismiss(animated: true, completion: nil)
-        } else {
-            self.navigationController?.popViewController(animated: true)
+        moveHomeButton.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.bottom.equalTo(moveMainButton.snp.top).offset(-22)
+            $0.height.equalTo(52)
         }
-    }
-    func setDataBind(userNickName : String) {
-        welcomeLabel.text = "\(userNickName)님 반가워요!"
     }
 }
