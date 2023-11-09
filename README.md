@@ -26,7 +26,7 @@ Sopt Seminar 과제 레포입니다
 
 
 ### 🍎5주차 - 합동세미나
-[합동세미나 레포지토리](https://github.com/GOSOPT-CDS-TEAM-APP5/Lotte-Cinema-iOS/issues) |
+[합동세미나 레포지토리](https://github.com/GOSOPT-CDS-TEAM-APP5/Lotte-Cinema-iOS) |
 |:---:|
 
 
